@@ -1,0 +1,10 @@
+nav > a {
+  padding: 5px;
+  text-decoration: none;
+}
+
+nav > a.nav-active{
+  background-color: #0b3e63;
+  color: white;
+  font-weight: bold;
+}

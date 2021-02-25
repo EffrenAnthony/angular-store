@@ -1,0 +1,5 @@
+<div class="product-list">
+  <!-- asi es como renderizamos un componente que recibe un input, entre corchetes el nobre del input -->
+  <!-- entre parentesis el Output(que es un vento) que debe emitir, la cual debe estar en su componente (el hijo) y en el componente padre la función que se envía-->
+  <app-product *ngFor='let product of products' (productClicked)='clickProduct($event)' [product]='product'></app-product>
+</div>

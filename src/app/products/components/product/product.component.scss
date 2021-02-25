@@ -1,0 +1,54 @@
+// host hace referencia al elemento
+:host{
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 5px;
+  display: block;
+  padding: 10px;
+  background-color: #0b3e63;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-title{
+  text-align: center;
+}
+.product-image {
+  max-width: 100%;
+}
+
+.product-labels-container{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-btn{
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+  background-color: aliceblue;
+  box-shadow: none;
+  border-radius: 5px;
+  font-size: large;
+  border: none;
+  margin-top: 5px;
+}
+.product-btn:hover{
+  background-color: #87C73F;
+  color: white;
+}
+.product-btn-secondary{
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+  background-color: aliceblue;
+  box-shadow: none;
+  border-radius: 5px;
+  font-size: large;
+  border: none;
+}
+.product-btn-secondary:hover{
+  background-color: #4150d4;
+  color: white;
+}
+

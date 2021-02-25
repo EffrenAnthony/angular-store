@@ -1,0 +1,11 @@
+<h3 class="product-title">{{product.title | uppercase}}</h3>
+<img class="product-image" src={{product.image}}>
+<div class="product-labels-container">
+  <h4>{{product.price | currency: 'S/.'}}</h4>
+  <p>{{product.description | slice: 0 : 10}}</p>
+  <p>{{today | date }}</p>
+  <!-- <button class="product-btn-secondary" [routerLink]="['/products/'+ product.id]">Ver detalle</button> -->
+  <button class="product-btn-secondary" [routerLink]="['/products', product.id]">Ver detalle</button>
+  <!-- <a class="product-btn-secondary" [routerLink]="['/products', product.id]">Ver detalle</a> -->
+  <button class="product-btn" (click)='addCart(product.title)'>Agreagar al carrito</button>
+</div>
