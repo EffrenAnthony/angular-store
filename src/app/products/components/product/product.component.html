@@ -1,11 +1,30 @@
-<h3 class="product-title">{{product.title | uppercase}}</h3>
+<!-- <mat-card class="d-flex flex-column justify-content-between h-100"> -->
+<mat-card class="m-2">
+  <mat-card-header>
+    <mat-card-title>{{product.title | uppercase}}</mat-card-title>
+    <mat-card-subtitle>{{product.price | currency: 'S/.'}}</mat-card-subtitle>
+  </mat-card-header>
+  <div class="crop-image">
+    <img src={{product.image}}>
+  </div>
+  <mat-card-content>
+    <p>{{product.description | slice: 0 : 10}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button [routerLink]="['/products', product.id]">Ver detalle</a>
+    <button mat-raised-button color="primary" (click)='addCart(product.title)'>Agreagar al carrito</button>
+  </mat-card-actions>
+</mat-card>
+
+
+<!-- <h3 class="product-title">{{product.title | uppercase}}</h3>
 <img class="product-image" src={{product.image}}>
 <div class="product-labels-container">
   <h4>{{product.price | currency: 'S/.'}}</h4>
   <p>{{product.description | slice: 0 : 10}}</p>
-  <p>{{today | date }}</p>
+  <p>{{today | date }}</p> -->
   <!-- <button class="product-btn-secondary" [routerLink]="['/products/'+ product.id]">Ver detalle</button> -->
-  <button class="product-btn-secondary" [routerLink]="['/products', product.id]">Ver detalle</button>
-  <!-- <a class="product-btn-secondary" [routerLink]="['/products', product.id]">Ver detalle</a> -->
-  <button class="product-btn" (click)='addCart(product.title)'>Agreagar al carrito</button>
-</div>
+  <!-- <button   [routerLink]="['/products', product.id]">Ver detalle</button> -->
+  <!-- <a [routerLink]="['/products', product.id]">Ver detalle</a>
+  <button mat-raised-button color="primary" (click)='addCart(product.title)'>Agreagar al carrito</button>
+</div> -->

@@ -1,22 +1,35 @@
 // host hace referencia al elemento
-:host{
-  border: 1px solid black;
-  margin: 2px;
-  border-radius: 5px;
-  display: block;
-  padding: 10px;
-  background-color: #0b3e63;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+// :host{
+//   border: 1px solid black;
+//   margin: 2px;
+//   border-radius: 5px;
+//   display: block;
+//   padding: 10px;
+//   background-color: #0b3e63;
+//   color: white;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
 
 .product-title{
   text-align: center;
 }
-.product-image {
-  max-width: 100%;
+// .product-image {
+//   max-width: 100%;
+// }
+.crop-image{
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+  }
 }
 
 .product-labels-container{

@@ -2,9 +2,18 @@ nav > a {
   padding: 5px;
   text-decoration: none;
 }
+nav > a:hover {
+  color: #F83F81;
+}
 
 nav > a.nav-active{
   background-color: #0b3e63;
   color: white;
-  font-weight: bold;
+}
+
+.header-row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

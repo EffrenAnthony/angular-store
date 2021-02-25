@@ -23,8 +23,10 @@ import { CoreModule } from './core/core.module';
 import { ContactModule } from './contact/contact.module';
 // import { ProductsComponent } from './products/components/products/products.component';
 import { ProductsModule } from './products/products.module';
-import { ProductDetailModule } from './product-detail/product-detail.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AboutUsModule } from './about-us/about-us.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -38,18 +40,23 @@ import { ProductDetailModule } from './product-detail/product-detail.module';
     // ProductDetailComponent,
     LayoutComponent
   ],
+  // para hacer lazy loading, NO tenemos que importar los modulos creados fuera del app.module
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     SwiperModule,
-    HomeModule,
+    // HomeModule,
     SharedModule,
     CoreModule,
-    ContactModule,
-    ProductsModule,
-    ProductDetailModule
+    // ContactModule,
+    // ProductsModule,
+    BrowserAnimationsModule,
+    // ProductDetailModule
     // ProductsComponent
+    // AboutUsModule,
+    NgbModule,
+    // AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

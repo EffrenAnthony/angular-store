@@ -1,0 +1,153 @@
+.image-aboutus-banner {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://images.pexels.com/photos/556962/pexels-photo-556962.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  padding-top: 110px;
+  padding-bottom:110px;
+}
+
+.image-aboutus-sm-banner {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://images.pexels.com/photos/631008/pexels-photo-631008.jpeg?w=940&h=650&auto=compress&cs=tinysrgb");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom:30px;
+}
+.lg-text {
+  font-size:52px;
+  font-weight: 600;
+  text-transform: none;
+  color:#fff;
+}
+.image-aboutus-para {
+  color:#fff;
+}
+
+/************************* */
+.plan {
+  background: #f9f9f9;
+  padding: 50px 30px;
+  margin-bottom: 30px;
+}
+.plan-header h4 {
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 600;
+}
+.plan-header {
+  font-weight: 700;
+}
+.plan-header span {
+      color: #fe4819;
+      font-size: 40px;
+}
+.plan li {
+  padding-bottom: 15px;
+}
+.plan ul {
+  padding-left: 0;
+  margin-bottom: 15px;
+  list-style: none;
+}
+.plan-header p {
+  padding-top: 12px;
+  padding-bottom: 15px;
+}
+
+.col-md-3,.col-md-4 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.bg-pink {
+  background:#f0f0f0;
+}
+.bg-blue {
+  background:#d6d6d6;
+  color:#000;
+}
+.padding35 {
+  padding: 35px 0 35px;
+}
+
+
+/* Feature-CSS */
+
+.icon {
+  color : #fff;
+  padding:15px;
+  background:#323232 ;
+  font-size:50px;
+  border-radius:90px;
+  border:10px solid #323232 ;
+
+}
+.feature-box {
+  text-align: center;
+  padding: 20px;
+  transition: .5s;
+  margin-bottom: 30px;
+  border: 1px solid #e8e8e8;
+}
+.feature-box:hover {
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.feature-box h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 25px 0 15px;
+}
+
+/* Site Heading */
+.site-heading h3{
+  font-size : 40px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.border {
+  background: #e8e8e8 ;
+  height: 1px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
+  float:left;
+}
+
+.paddingTB60 {
+  padding-top:60px;
+  padding-bottom:60px;
+}
+
+
+.carousel .item {
+height: 500px;
+background-color:#555;
+}
+.carousel img {
+position: absolute;
+top: 0;
+left: 0;
+
+}
+.carousel-caption {
+  margin-bottom:30px;
+}
+.carousel-caption h1 {
+  margin-bottom:15px;
+  font-size:42px;
+  font-weight:700px;
+}
+.carousel-caption p {
+  margin-bottom:20px;
+  font-size:16px;
+  font-weight:400px;
+}
