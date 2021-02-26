@@ -29,7 +29,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   .custom_container{
-    width: 1110px;
+    width: 100%;
     padding-right: 16px;
     padding-left: 16px;
   }
@@ -38,6 +38,11 @@
   .product-list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+  .custom_container{
+    width: 1510px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 

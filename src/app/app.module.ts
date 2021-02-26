@@ -17,16 +17,18 @@ import { SwiperModule } from 'swiper/angular';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 // import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
-import { HomeModule } from './home/home.module';
+// import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
-import { ContactModule } from './contact/contact.module';
+// import { ContactModule } from './contact/contact.module';
 // import { ProductsComponent } from './products/components/products/products.component';
-import { ProductsModule } from './products/products.module';
+// import { ProductsModule } from './products/products.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AboutUsModule } from './about-us/about-us.module';
-import { AdminModule } from './admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
+// import { AboutUsModule } from './about-us/about-us.module';
+// import { AdminModule } from './admin/admin.module';
+
 
 @NgModule({
   declarations: [
@@ -57,6 +59,7 @@ import { AdminModule } from './admin/admin.module';
     // AboutUsModule,
     NgbModule,
     // AdminModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
