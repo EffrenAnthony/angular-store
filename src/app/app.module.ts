@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 
 // import {ProductComponent} from './products/components/product/product.component';
-import { CartComponent } from './cart/cart.component';
+// import { CartComponent } from './shared/components/cart/cart.component';
 
 // import { ProductsComponent } from './products/products.component';
 // import { ContactComponent } from './contact/contact.component';
@@ -34,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     // ProductComponent,
-    CartComponent,
+    // CartComponent,
     // ProductsComponent,
     // ContactComponent,
     DemoComponent,

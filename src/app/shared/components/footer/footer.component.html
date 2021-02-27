@@ -18,12 +18,16 @@
         </mat-list>
       </div>
       <div class="col-md-4">
-        <h3>Items 1</h3>
-        <mat-list role="list" class="footer-list">
-          <mat-list-item role="listitem">Item 1</mat-list-item>
-          <mat-list-item role="listitem">Item 2</mat-list-item>
-          <mat-list-item role="listitem">Item 3</mat-list-item>
-        </mat-list>
+        <h3>Contacto</h3>
+          <mat-form-field class="example-full-width">
+            <mat-label>Correo</mat-label>
+            <!-- <input matInput placeholder="Ex. Pizza" value="Sushi"> -->
+            <input matInput placeholder="Digite su correo" [formControl]='emailField' type="email">
+          </mat-form-field>
+        <button mat-raised-button [disabled]='emailField.invalid' (click)="sendMail()">Enviar</button>
+        <!-- <button mat-raised-button [disabled]='emailField.invalid' *ngIf='emailField.valid' (click)="sendMail()">Enviar</button> -->
+        <!-- {{emailField.valid}}, {{emailField.invalid}} -->
+        <p *ngIf='emailField.invalid'>el campo no es valido</p>
       </div>
     </div>
     <p class="col">Todos los derechos reservados</p>
