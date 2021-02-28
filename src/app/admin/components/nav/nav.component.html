@@ -5,10 +5,13 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink='/admin/create'>Crear Producto</a>
       <a mat-list-item routerLink='/admin'>Home</a>
+      <a mat-list-item routerLink='/admin/create'>Crear Producto</a>
       <a mat-list-item routerLink='/admin/table'>Inventario</a>
       <a mat-list-item routerLink='/admin/products'>Productos</a>
+      <div mat-list-item>
+        <button mat-button color='primary' (click)='logout()'>Cerrar Sesión</button>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -21,7 +24,9 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>angular-store</span>
+      <div class="d-flex justify-content-end">
+        <h4>Hola: {{currentUser}}</h4>
+      </div>
     </mat-toolbar>
     <!-- hay que agregar el router outlet para que esté aqui el hijo de estas rutas -->
     <router-outlet></router-outlet>

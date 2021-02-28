@@ -8,6 +8,7 @@ import {
   DoCheck,
   OnDestroy} from '@angular/core';
 import {Product} from '../../../product.model';
+import { CartService } from '../../../core/services/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -24,7 +25,9 @@ export class ProductComponent implements OnInit{
 
   today = new Date();
 
-  constructor(){
+  constructor(
+    private cartService: CartService
+  ){
     // console.log('1. constructor');
   }
 
@@ -49,5 +52,6 @@ export class ProductComponent implements OnInit{
     console.log(`se añadió ${product}`);
     // este evento se emite al padre, lo que emitimos es ese this.product.id
     this.productClicked.emit(this.product.id);
+    this.cartService.addCart(this.product);
   }
 }

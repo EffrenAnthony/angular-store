@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-store-4f975": {
+      "hosting": {
+        "angular-store": [
+          "angular-store-4f975"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-store-4f975"
+  }
+}

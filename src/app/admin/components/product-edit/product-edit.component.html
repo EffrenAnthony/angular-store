@@ -1,0 +1,43 @@
+<form [formGroup]='form'(ngSubmit)='saveProduct($event)'>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Editar Producto: "{{this.form.get('title').value}}"</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+          <div class="col-sm">
+            <mat-form-field>
+              <input placeholder="Title" formControlName='title' matInput type='text'>
+            </mat-form-field>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <mat-form-field>
+              <input placeholder="Price" formControlName='price' matInput type='number'>
+            </mat-form-field>
+            <!-- aqui indicamos que ocurran las validaciones si esque hay error y si esque el usuario ya empezó a escribir -->
+            <div *ngIf='priceField.errors && priceField.dirty'>
+              <!-- para pasarle el validador le pasamos desde el formulario, hacemos get, extraemos el valor y preguntamos si hay error en la propiedad que indicamos -->
+              <p *ngIf='priceField.hasError("price_invalid")'>El valor máximo es 10,000</p>
+              <p *ngIf='form.get("price").hasError("required")'>*El campo es requerido</p>
+            </div>
+            <!-- priceFiel y form.get('price')  son lo mismo gracias a que en nuestro componente ts, hicimos get de ese valor -->
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <mat-form-field>
+              <textarea placeholder="Text" formControlName='description' matInput></textarea>
+              <!-- <input placeholder="Description" formControlName='description' matInput type='text'> -->
+            </mat-form-field>
+          </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button [disabled]='form.invalid' mat-raised-button type='submit' color='primary'>Guardar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

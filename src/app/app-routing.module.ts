@@ -36,7 +36,6 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        canActivate: [AdminGuard],
         // component: ProductsComponent
         loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
       },
@@ -48,14 +47,22 @@ const routes: Routes = [
       // },
       {
         path: 'contact',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
         // component: ContactComponent
       },
       {
         path: 'about-us',
-        canActivate: [AdminGuard],
         loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)
+        // component: ContactComponent
+      },
+      {
+        path: 'order',
+        loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
+        // component: ContactComponent
+      },
+      {
+        path: 'auth',
+        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
         // component: ContactComponent
       },
     ]
@@ -66,6 +73,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
+    canActivate: [AdminGuard],
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   },
   {

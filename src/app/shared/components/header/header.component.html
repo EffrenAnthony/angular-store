@@ -7,7 +7,9 @@
         <a mat-button routerLink="/contact" routerLinkActive="nav-active">Contactos</a>
         <a mat-button routerLink="/about-us" routerLinkActive="nav-active">Nosotros</a>
       </nav>
-      <a mat-raised-button matBadge='4' matBadgeColor="accent">
+      <!-- con async nos suscribimos a un observable -->
+      <!-- con async automaticamente angular hace que nos sucribamos y desuscribamos al observable -->
+      <a mat-raised-button [matBadge]='total$ | async' matBadgeColor="accent" routerLink='/order'>
         <mat-icon>shopping_cart</mat-icon>
         Carrito
       </a>

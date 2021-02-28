@@ -28,6 +28,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 // import { AboutUsModule } from './about-us/about-us.module';
 // import { AdminModule } from './admin/admin.module';
+import { MaterialModule } from './material/material.module';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+// import { AngularFirestore } from '@angular/fire/firestore';
+import { AuthModule } from './auth/auth.module';
 
 
 @NgModule({
@@ -40,7 +47,8 @@ import { HttpClientModule } from '@angular/common/http';
     DemoComponent,
     PageNotFoundComponent,
     // ProductDetailComponent,
-    LayoutComponent
+    LayoutComponent,
+
   ],
   // para hacer lazy loading, NO tenemos que importar los modulos creados fuera del app.module
   imports: [
@@ -59,7 +67,14 @@ import { HttpClientModule } from '@angular/common/http';
     // AboutUsModule,
     NgbModule,
     // AdminModule
-    HttpClientModule
+    AuthModule,
+    HttpClientModule,
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    // AngularFirestore
+
   ],
   providers: [],
   bootstrap: [AppComponent]
